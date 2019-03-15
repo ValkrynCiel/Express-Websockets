@@ -51,6 +51,14 @@ class Room {
       member.send(JSON.stringify(data));
     }
   }
+
+  sendJoke(member) {
+    member.send(JSON.stringify({
+      type: "chat",
+      text: "What do you call eight hobbits? A hob-byte!",
+      name: "Server"
+    }));
+  }
 }
 
 module.exports = Room;
