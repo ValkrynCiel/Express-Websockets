@@ -59,6 +59,17 @@ class Room {
       name: "Server"
     }));
   }
+
+  getMembers(member){
+    let names = Array.from(this.members, member => member.name);
+    
+    member.send(JSON.stringify({
+      type: "chat",
+      text: `In Room: ${names}`,
+      name: 'Server'
+    }));
+  }
+
 }
 
 module.exports = Room;

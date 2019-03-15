@@ -59,6 +59,7 @@ class ChatUser {
     if (msg.type === 'join') this.handleJoin(msg.name);
     else if (msg.type === 'chat') this.handleChat(msg.text);
     else if (msg.type === 'get-joke') this.room.sendJoke(this);
+    else if (msg.type === 'get-members') this.room.getMembers(this);
     else throw new Error(`bad message: ${msg.type}`);
   }
 
