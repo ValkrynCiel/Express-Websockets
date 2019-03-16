@@ -67,7 +67,9 @@ $('form').submit(function (evt) {
     data = { type: "get-joke" };
   } 
   else if($('#m').val() === "/members"){
-    data = {type: "get-members"};
+  //   data = {type: "get-members"};
+  // } else if ($('#m').val().slice(0,5) === "/priv"){
+  //   handlePrivateMessage($('#m').val())
   }
   else {
     data = { type: "chat", text: $("#m").val() };
@@ -76,4 +78,9 @@ $('form').submit(function (evt) {
 
   $('#m').val('');
   });
+
+// function handlePrivateMessage(string){
+
+//   let 
+// }
 
